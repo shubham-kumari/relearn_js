@@ -28,6 +28,33 @@ const myFunc = function(){
     
 }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+// memory
+// Stack(primitive -> call by value -> changes in copy) , heap memory (non - primitive -> call by refrence -> changes in original value)
+
+let myChannelName = "Shubham"
+let anotherName = myChannelName;
+anotherName = "shubham.kumari"
+console.log(myChannelName);
+console.log(anotherName); // changes in copy
+
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne;
+userTwo.email = "shubham@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);  // change in original value
+
+
