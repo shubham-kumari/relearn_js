@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h1>heading</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let intervalId;
+    const sayShubham = function (str) {
+      console.log(str, Date.now());
+    };
+
+    const startGen = function () {
+      if (!intervalId) {
+        intervalId = setInterval(sayShubham, 1000, "hi");
+      }
+    };
+    document.querySelector("#start").addEventListener("click", startGen, false);
+    const stopGen = function () {
+      clearInterval(intervalId);
+      intervalId = null;
+      console.log("STOPPED");
+    };
+    document.querySelector("#stop").addEventListener("click", stopGen, false);
+  </script>
+</html>
