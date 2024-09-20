@@ -10,6 +10,7 @@ const gameName = new String("shubham-su-com")
 // console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(3));
 // console.log(gameName.indexOf('b'));
+// console.log(name[0]);
 
 const newString = gameName.substring(0,4)
 console.log(newString);
